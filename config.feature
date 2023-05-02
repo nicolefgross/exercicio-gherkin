@@ -9,38 +9,30 @@ Para depois inserir no carrinho
 Contexto:
 Dado que eu acesse a página de produtos da EBAC-SHOP
 
-Cenário: Seleção de cor e tamanho devem ser obrigatórios
-Quando eu selecionar um produto com uma cor e tamanho
-E tentar confirmar a compra
-Então deve aparecer o alerta: "Quantidade deve ser adicionada"
+Esquema do Cenário: Seleção de cor, tamanho, e quantidade devem ser obrigatórios
+Quando eu selecionar um produto 
+E não preencher ou a <cor>, ou o <tamanho>, e/ou a <quantidade>
+Então deve aparecer uma <mensagem> de alerta
 
-Cenário: Seleção de tamanho e quantidade devem ser obrigatórios
-Quando eu selecionar um produto com um tamanho e uma quantidade
-E tentar confirmar a compra
-Então deve aparecer o alerta: "Cor deve ser selecionada"
+Exemplo:
+|cor|tamanho|quantidade|mensagem|
+|"selecionada"|""|"selecionada"|"Selecione o tamanho desejado"|
+|"selecionada"|"selecionada"|""|"Selecione a quantidade desejada"|
+|""|"selecionada"|"selecionada"|"Selecione a cor desejada"|
 
-Cenário: Seleção de quantidade e cor devem ser obrigatórios
-Quando eu selecionar um produto com cor e quantidade
-E tentar confirmar a compra
-Então deve aprecer o alerta: "Tamanho deve ser selecionado"
+Esquema do Cenário: Seleção de produtos
+Quando eu selecionar a <quantidade de produto> 
+E clicar em adicionar ao carrinho
+Então deve aparecer a <mensagem>
 
-Cenário: Seleção de cor, tamanho e quantidade devem ser obrigatório
-Quando eu selecionar um produto com uma cor, tamanho e quantidade  
-E confirmar a compra  
-Então deve aparecer a mensagem: "Adicionado com sucesso!"
-
-Cenário: Seleção de 10 produtos
-Quando eu selecionar o 10º produto que eu goste
-E adicionar ao carrinho
-Então deve aparecer a mensagem: "Adicionado com sucesso!"
-
-Cenário: Seleção de 11 produtos
-Quando eu selecionar o 11º produto que eu goste
-E tentar adicionar ao carrinho
-Então deve aparecer a mensagem "Número máximo de itens atingindo"
+Exemplo:
+|quantidade de produtos|mensagem|
+|1 produto|"Produto adicionado ao carrinho"|
+|5 produtos|"Produtos adicionados ao carrinho"|
+|10 produtos|"Produtos adicionados ao carrinho"|
+|11 produtos|"Número máximo de produtos atingido"|
 
 Cenário: Ao clicar no botão "limpar" deve voltar ao estado original
-Quando eu selecionar um produto que eu goste
-E adicionar o tamanho e a cor
+Quando eu selecionar um produto que eu goste com o tamanho, e a cor
 E clicar no botão "limpar"
 Então deve os itens de tamanho e cor não devem mais estar selecionados
