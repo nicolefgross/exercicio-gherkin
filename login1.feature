@@ -13,12 +13,12 @@ Quando eu digitar o usuário "mariachiquinha@ebac.com.br"
 E a senha "11223344"
 Então devo ser direcionado para o carrinho
 
-Cenário: Autenticação com usuário inexistente
-Quando eu digitar o usuário "Maria.chiquinha@ebac.com.br"
-E a senha "11223344"
-Então deve exibir uma mensagem de alerta: "Usuário ou senha inválidos"
+Esquema do Cenário: Login com dados inválidos ou inexistentes
+E já tenha cadastro
+Quando eu digitar o <usuário> e a <senha>
+Então deve aparecer a <mensagem> de alerta
 
-Cenário: Autenticação com senha inválida
-Quando eu digitar "mariachiquinha@ebac.com.br"
-E a senha "1234"
-Então deve exibir uma mensagem de alerta: "Usuário ou senha inválidos"
+Exemplos:
+|usuário|senha|mensagem|
+|"maria.ebac.com.br"|"11223344"|"Usuário ou senha inválidos"|
+|"maria@ebac.com.br"|"1"|"Usuário ou senha inválidos"|
