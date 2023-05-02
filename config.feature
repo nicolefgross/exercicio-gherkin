@@ -15,10 +15,10 @@ E não preencher ou a <cor>, ou o <tamanho>, e/ou a <quantidade>
 Então deve aparecer uma <mensagem> de alerta
 
 Exemplo:
-|cor|tamanho|quantidade|mensagem|
-|"selecionada"|""|"selecionada"|"Selecione o tamanho desejado"|
-|"selecionada"|"selecionada"|""|"Selecione a quantidade desejada"|
-|""|"selecionada"|"selecionada"|"Selecione a cor desejada"|
+  | cor           | tamanho       | quantidade    | mensagem                          |
+  | "selecionada" | ""            | "selecionada" | "Selecione o tamanho desejado"    |
+  | "selecionada" | "selecionada" | ""            | "Selecione a quantidade desejada" |
+  | ""            | "selecionada" | "selecionada" | "Selecione a cor desejada"        |
 
 Esquema do Cenário: Seleção de produtos
 Quando eu selecionar a <quantidade de produto> 
@@ -26,11 +26,11 @@ E clicar em adicionar ao carrinho
 Então deve aparecer a <mensagem>
 
 Exemplo:
-|quantidade de produtos|mensagem|
-|1 produto|"Produto adicionado ao carrinho"|
-|5 produtos|"Produtos adicionados ao carrinho"|
-|10 produtos|"Produtos adicionados ao carrinho"|
-|11 produtos|"Número máximo de produtos atingido"|
+   | quantidade de produtos | mensagem                             |
+   | 1 produto              | "Produto adicionado ao carrinho"     |
+   | 5 produtos             | "Produtos adicionados ao carrinho"   |
+   | 10 produtos            | "Produtos adicionados ao carrinho"   |
+   | 11 produtos            | "Número máximo de produtos atingido" |
 
 Cenário: Ao clicar no botão "limpar" deve voltar ao estado original
 Quando eu selecionar um produto que eu goste com o tamanho, e a cor
