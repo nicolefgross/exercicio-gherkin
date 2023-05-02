@@ -19,6 +19,7 @@ Quando eu digitar o <usuário> e a <senha>
 Então deve aparecer a <mensagem> de alerta
 
 Exemplos:
-|usuário|senha|mensagem|
-|"maria.ebac.com.br"|"11223344"|"Usuário ou senha inválidos"|
-|"maria@ebac.com.br"|"1"|"Usuário ou senha inválidos"|
+Exemplos:
+    | usuário             | senha      | mensagem                     |
+    | "maria.ebac.com.br" | "11223344" | "Usuário ou senha inválidos" |
+    | "maria@ebac.com.br" | "1"        | "Usuário ou senha inválidos" |
